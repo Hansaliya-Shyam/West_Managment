@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4caeaa",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#151d1d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Waste Scanner AI</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased overflow-hidden">
+<!-- Main Scanner Interface -->
+<div class="relative flex h-screen w-full flex-col bg-slate-900 overflow-hidden">
+<!-- Top App Bar Overlay -->
+<div class="absolute top-0 left-0 w-full z-20 flex items-center justify-between p-4 bg-gradient-to-b from-black/60 to-transparent">
+<button class="text-white flex size-10 shrink-0 items-center justify-center rounded-full bg-white/10 backdrop-blur-md">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Waste Scanner</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="text-white flex size-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md">
+<span class="material-symbols-outlined">bolt</span>
+</button>
+</div>
+</div>
+<!-- Camera Viewport (Simulated with Background) -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center" data-alt="Close up of a discarded plastic bottle on a table">
+<!-- AI Bounding Box Overlay -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative w-64 h-80 border-4 border-primary rounded-xl flex flex-col items-center justify-start pt-4">
+<!-- Scanning corners -->
+<div class="absolute -top-1 -left-1 w-8 h-8 border-t-4 border-l-4 border-white rounded-tl-xl"></div>
+<div class="absolute -top-1 -right-1 w-8 h-8 border-t-4 border-r-4 border-white rounded-tr-xl"></div>
+<div class="absolute -bottom-1 -left-1 w-8 h-8 border-b-4 border-l-4 border-white rounded-bl-xl"></div>
+<div class="absolute -bottom-1 -right-1 w-8 h-8 border-b-4 border-r-4 border-white rounded-br-xl"></div>
+<!-- Scanning Line Animation Simulation -->
+<div class="absolute top-0 left-0 w-full h-1 bg-primary/50 shadow-[0_0_15px_rgba(76,174,170,0.8)] opacity-70"></div>
+<!-- Confidence Label -->
+<div class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider absolute -top-4">
+                            Plastic Bottle – 95% confidence
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Camera Controls -->
+<div class="absolute bottom-32 left-0 w-full flex items-center justify-center gap-8 z-10">
+<button class="flex shrink-0 items-center justify-center rounded-full size-12 bg-black/40 text-white backdrop-blur-md border border-white/20">
+<span class="material-symbols-outlined">image</span>
+</button>
+<button class="flex shrink-0 items-center justify-center rounded-full size-20 bg-primary text-white border-4 border-white/30 shadow-lg">
+<span class="material-symbols-outlined !text-4xl">fit_screen</span>
+</button>
+<button class="flex shrink-0 items-center justify-center rounded-full size-12 bg-black/40 text-white backdrop-blur-md border border-white/20">
+<span class="material-symbols-outlined">cached</span>
+</button>
+</div>
+<!-- Result Modal Overlay (Active) -->
+<div class="fixed inset-0 z-30 flex flex-col justify-end bg-black/60 backdrop-blur-sm">
+<!-- Simulated Confetti (Abstract patterns) -->
+<div class="absolute inset-0 pointer-events-none opacity-40 bg-[radial-gradient(circle_at_20%_30%,#4caeaa_1px,transparent_1px),radial-gradient(circle_at_80%_10%,#facc15_1px,transparent_1px),radial-gradient(circle_at_40%_80%,#4caeaa_2px,transparent_2px),radial-gradient(circle_at_70%_60%,#facc15_1px,transparent_1px)] bg-[length:50px_50px]"></div>
+<div class="bg-background-light dark:bg-background-dark w-full rounded-t-[2rem] p-6 shadow-2xl relative">
+<!-- Handle Bar -->
+<div class="absolute top-3 left-1/2 -translate-x-1/2 w-12 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+<div class="flex flex-col items-center text-center mt-4">
+<div class="bg-primary/20 p-4 rounded-full mb-4">
+<span class="material-symbols-outlined text-primary !text-5xl">auto_awesome</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-2xl font-bold mb-1">Great Job! 🎉</h3>
+<p class="text-slate-500 dark:text-slate-400 mb-6">You've successfully identified an item.</p>
+<!-- Details Card -->
+<div class="w-full bg-slate-100 dark:bg-slate-800/50 rounded-2xl p-4 mb-6 space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-slate-500 dark:text-slate-400 font-medium">Waste type</span>
+<span class="text-slate-900 dark:text-slate-100 font-bold">Plastic Bottle</span>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex justify-between items-center">
+<span class="text-slate-500 dark:text-slate-400 font-medium">Points earned</span>
+<span class="text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined !text-lg">stars</span>
+                                +10 XP
+                            </span>
+</div>
+</div>
+<!-- Instructions Link -->
+<a class="flex items-center gap-2 text-primary font-semibold mb-8 hover:underline" href="#">
+<span class="material-symbols-outlined">recycling</span>
+                        View Recycling Instructions
+                    </a>
+<!-- Action Buttons -->
+<div class="flex w-full gap-4">
+<button class="flex-1 bg-primary text-white font-bold h-14 rounded-xl shadow-md hover:brightness-105 active:scale-[0.98] transition-all">
+                            Log Waste
+                        </button>
+<button class="flex size-14 items-center justify-center rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+<!-- Extra Padding for safe area -->
+<div class="h-4"></div>
+</div>
+</div>
+</div>
+</body></html>

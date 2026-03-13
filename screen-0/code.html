@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4caeaa",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#151d1d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Waste Tracker Splash</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full max-w-[375px] mx-auto flex-col justify-between overflow-x-hidden p-6">
+<!-- Header/Logo Section -->
+<div class="flex flex-col items-center pt-12">
+<div class="mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
+<span class="material-symbols-outlined text-primary !text-6xl" data-icon="recycling">recycling</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-tight">Waste Tracker</h2>
+</div>
+<!-- Hero Section -->
+<div class="flex flex-col items-center flex-1 justify-center space-y-8">
+<div class="w-full aspect-square max-h-64 rounded-xl overflow-hidden shadow-sm">
+<div class="h-full w-full bg-cover bg-center" data-alt="Modern recycling bin with sustainable waste items" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtM1R06ivwfFb0P3oFqSJjWMrZh3bKtaQ-IEGa3O_dTqMIHJsEUmzOkSEtAmpC9TVQi_qx44-h_uow1NgCVWnhT6e66tQyDJpixazyYkZc2ltFOG8IFC2tzBYUYiCHCQPlJQ4W0Edm2pp17EN8NS525_JznZUGcZX7YHTbqP0fxguZoKR2T7UxN6jvIKq33mdIxFdVS9lvIDqBz9ydUYo6-YYDXmLJNNrY92K_SSveJIHWXhJPSXoiQyLs2KdPQ5UnwFvakSe97A");'>
+</div>
+</div>
+<div class="text-center px-2">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight tracking-tight mb-4">
+                    Scan Waste. <br/>Recycle Smart.
+                </h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed">
+                    Join the movement to make the planet greener with AI-powered tracking.
+                </p>
+</div>
+</div>
+<!-- Action Section -->
+<div class="pb-8 space-y-6">
+<div class="flex justify-center space-x-2">
+<div class="h-1.5 w-8 rounded-full bg-primary"></div>
+<div class="h-1.5 w-2 rounded-full bg-primary/20"></div>
+<div class="h-1.5 w-2 rounded-full bg-primary/20"></div>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-xl h-14 bg-primary text-slate-900 text-lg font-bold transition-all active:scale-[0.98] shadow-lg shadow-primary/20">
+<span>Continue</span>
+</button>
+<p class="text-center text-slate-500 text-sm">
+                By continuing, you agree to our Terms
+            </p>
+</div>
+</div>
+</body></html>

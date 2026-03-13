@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Waste Tracker - AI Powered Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4caeaa",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#151d1d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center p-4 justify-between sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Waste Tracker</h1>
+<div class="flex size-10 items-center justify-end">
+<button class="relative flex items-center justify-center rounded-full text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 block h-2.5 w-2.5 rounded-full bg-red-500 ring-2 ring-background-light dark:ring-background-dark"></span>
+</button>
+</div>
+</header>
+<main class="flex-1 pb-24">
+<!-- Hero Stats Grid -->
+<div class="grid grid-cols-2 gap-3 p-4">
+<div class="col-span-2 flex flex-col gap-2 rounded-xl p-5 bg-primary/10 border border-primary/20">
+<div class="flex items-center justify-between">
+<p class="text-primary text-sm font-semibold uppercase tracking-wider">Total Impact</p>
+<span class="material-symbols-outlined text-primary">eco</span>
+</div>
+<div class="flex items-baseline gap-2">
+<p class="text-slate-900 dark:text-slate-100 text-3xl font-bold">1,250</p>
+<p class="text-primary text-sm font-medium">Points earned</p>
+</div>
+<div class="w-full bg-primary/20 rounded-full h-1.5 mt-2">
+<div class="bg-primary h-1.5 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Items scanned</p>
+<p class="text-slate-900 dark:text-slate-100 text-xl font-bold">128</p>
+<p class="text-emerald-600 dark:text-emerald-400 text-xs font-semibold flex items-center">
+<span class="material-symbols-outlined text-xs mr-0.5">trending_up</span>+12%
+                    </p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Waste recycled</p>
+<p class="text-slate-900 dark:text-slate-100 text-xl font-bold">42 kg</p>
+<p class="text-emerald-600 dark:text-emerald-400 text-xs font-semibold flex items-center">
+<span class="material-symbols-outlined text-xs mr-0.5">trending_up</span>+5%
+                    </p>
+</div>
+</div>
+<!-- Primary Action Button -->
+<div class="px-4 py-2">
+<button class="w-full flex flex-col items-center justify-center gap-3 rounded-2xl p-8 bg-primary text-white shadow-lg shadow-primary/30 transition-transform active:scale-95">
+<div class="bg-white/20 p-4 rounded-full">
+<span class="material-symbols-outlined !text-4xl">photo_camera</span>
+</div>
+<div class="text-center">
+<span class="text-xl font-bold block">Scan Waste</span>
+<span class="text-white/80 text-sm">AI identifies &amp; sorts your items</span>
+</div>
+</button>
+</div>
+<!-- Recycling Tip Card -->
+<div class="px-4 pt-6 pb-2">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Today’s Recycling Tip</h3>
+<span class="material-symbols-outlined text-primary cursor-pointer">info</span>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-slate-900 aspect-[16/7] group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="Abstract green recycling pattern background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsSAlpBKXhHGaYPlQwheidcLuihsiHY8CDBq74XPaGuwKZjqTZc8lQQNliQ7XKWiYJ1CK2-s6JYFxB6mTGZFr8GH62Q5rPRWmFGpJK7Vh4abONfz1smkMmaL7kpP9duHdUW7DLQJlpfwVGCsGrXXZ0NB2esa3tW4PNAVkgZ2xrtRTqRxKSnzTQk5pKNUzZqJzqWrbBC3zEAkEBGrTqWHE5MZFZQBQDTDYlvuF6ktO_cVkoIIQpOZoBKzrJTT95jIkPJt_9jHa69g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent p-4 flex flex-col justify-end">
+<h4 class="text-white font-bold text-lg">Empty your containers</h4>
+<p class="text-white/80 text-sm">Rinse out food residues from jars and bottles to prevent contamination in the recycling bin.</p>
+</div>
+</div>
+</div>
+<!-- Mini Leaderboard -->
+<div class="px-4 pt-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight">Community Leaderboard</h3>
+<a class="text-primary text-sm font-semibold" href="#">View All</a>
+</div>
+<div class="space-y-3 bg-slate-100 dark:bg-slate-800/30 rounded-2xl p-4 border border-slate-200 dark:border-slate-700">
+<!-- Rank 1 -->
+<div class="flex items-center gap-3">
+<span class="font-bold text-primary w-4">1</span>
+<img class="size-10 rounded-full border-2 border-primary/20" data-alt="User profile avatar male" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAut1ccGpSZvaSa0QI8lqDqxda0Jt0kfc43HQk2ZSZpQiKPhzZtDDrJxQkkCG-PlMEUFxHf-kzHCQSFyq6NQHuR5JeZPMyS17b3NGHfhq2JPqaE_SI-qc4BsjlRCMt6n-jMiALeEZyvfg8nI-c4dX2CyWSIBS8wlu7ZJe8KXQQJW5x5a3T1sSHLgJMDgBxiqHI5lrSQo08JvsGLl03lkbcCvNqQJY13iN4IZdgHvkP2wYsIix8QvNNa_WNBDMimciZ5mAh86erMBQ"/>
+<div class="flex-1">
+<p class="font-semibold text-sm text-slate-900 dark:text-slate-100">Alex Rivers</p>
+<p class="text-xs text-slate-500">2,450 pts</p>
+</div>
+<span class="material-symbols-outlined text-amber-500 filled-icon text-xl">emoji_events</span>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-700 ml-12"></div>
+<!-- Rank 2 -->
+<div class="flex items-center gap-3">
+<span class="font-bold text-slate-400 w-4">2</span>
+<img class="size-10 rounded-full border-2 border-slate-200 dark:border-slate-700" data-alt="User profile avatar female" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfrEPD0xloZgYLxkDaf7IAZhBQE8a-H2y1Nty2EKrnR3inqxtq5LdOaSl-V5QQpb3kjBKoH4uExPsGDzEDkni8NYdI4V4gwN_DGyyIhGDLhZHZP2yFKNl8I7j9DDlsXVFJYlKrbrIK7I5D_uSMgXJcm23n3hxv5T9DFT6gJvhTq6Njkmp5a6Wihjz8bpaY7tl_K5dfsZQDVYw316oGuV6H1aUS5FY3BO_KAPiubR87NcoJNeK39b7OhiRsD6Jz1MSvqJtp7nKqtg"/>
+<div class="flex-1">
+<p class="font-semibold text-sm text-slate-900 dark:text-slate-100">Sarah Chen</p>
+<p class="text-xs text-slate-500">2,120 pts</p>
+</div>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-700 ml-12"></div>
+<!-- Rank 3 -->
+<div class="flex items-center gap-3">
+<span class="font-bold text-slate-400 w-4">3</span>
+<img class="size-10 rounded-full border-2 border-slate-200 dark:border-slate-700" data-alt="User profile avatar male" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnD9h2tFr4n2SzCzLncOCxJ2SL3qN18p-CKNcTqcQKsAANPjGCQdAPMKvAz15EMZVvb2y1DVp_SNFnDTcHpWM7WXkZESb6YDZ5dA_BkDx0hVRjZd7dvF5MF7CSjdFySl1ubzWp5b0pPSP--u95Sf1QFUBQHG5A241UxqzoLfduD0VPgPHaKyKEYpoPHlWmXFih6haBwRJDmBiK5dwHYmSLE3U5YP8LtwOEZ1g-ITjldT-EpoDX4cjhIm7q8CxTB1ya9sg0s-PmGQ"/>
+<div class="flex-1">
+<p class="font-semibold text-sm text-slate-900 dark:text-slate-100">Mike Ross</p>
+<p class="text-xs text-slate-500">1,980 pts</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-background-light/95 dark:bg-background-dark/95 border-t border-slate-200 dark:border-slate-800 backdrop-blur-md px-6 pb-6 pt-3 flex justify-between items-center z-20">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined filled-icon">home</span>
+<p class="text-[10px] font-bold uppercase tracking-widest">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">camera</span>
+<p class="text-[10px] font-medium uppercase tracking-widest">Scan</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-[10px] font-medium uppercase tracking-widest">Community</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium uppercase tracking-widest">Profile</p>
+</a>
+</nav>
+</div>
+</body></html>

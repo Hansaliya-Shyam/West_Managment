@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4caeaa",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#151d1d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- Header -->
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10 border-b border-primary/10">
+<div class="flex size-12 shrink-0 items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">emoji_events</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight flex-1 text-center">Leaderboard</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-full hover:bg-primary/10 text-slate-700 dark:text-slate-300 transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+<!-- User Profile Card -->
+<div class="flex p-6 @container">
+<div class="flex w-full flex-col gap-6 items-center bg-white dark:bg-slate-800/50 rounded-2xl p-6 shadow-sm border border-primary/5">
+<div class="flex gap-4 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-28 w-28 ring-4 ring-primary ring-offset-4 dark:ring-offset-background-dark" data-alt="Portrait of Alex Johnson, male user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDICCkg-ZjttJ--s2XyHV3owPniVaAF692_S9U-rRl5Cxv3OZkEH8LHRW_PC_HymYmz--TLWud3eK_ff-ZAP2ieZ_aBpTRiqZGIs09cCfPGyYA_EGZadAArCvs_hD1d8d3Ob6D_wETMOFESCLFNB-vlG821u0Agmb23ZsrQIUdyxFKZ2CzDcTqDRDyaKPTml-iSrGy31YgsJwCgQoNOIPdeGsuJ5WD4lk7opUECnJa6jz6WJUtWf-CMOj441fsUD7ultWKtwkZ3SA");'>
+</div>
+<div class="absolute -bottom-2 right-0 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg">
+                            LVL 24
+                        </div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-2xl font-bold leading-tight tracking-tight text-center">Alex Johnson</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary font-bold">#12 Global</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-slate-500 dark:text-slate-400">2,450 Points</span>
+</div>
+</div>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-3 w-full gap-2 text-center border-t border-slate-100 dark:border-slate-700 pt-6">
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">Rank</p>
+<p class="text-lg font-bold text-primary">12th</p>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">Items</p>
+<p class="text-lg font-bold text-primary">482</p>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">CO2 Saved</p>
+<p class="text-lg font-bold text-primary">12kg</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Achievement Badges -->
+<div class="px-4 py-2">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-bold text-lg">Your Badges</h3>
+<a class="text-primary text-sm font-semibold" href="#">View All</a>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<!-- Badge 1 -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 bg-white dark:bg-slate-800 p-4 rounded-xl w-32 border border-primary/10">
+<div class="size-14 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<p class="text-[11px] font-bold text-center leading-tight">Eco Starter</p>
+</div>
+<!-- Badge 2 -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 bg-primary p-4 rounded-xl w-32 shadow-lg shadow-primary/20">
+<div class="size-14 rounded-full bg-white/20 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl text-white">workspace_premium</span>
+</div>
+<p class="text-[11px] font-bold text-center leading-tight text-white">Recycling Champion</p>
+</div>
+<!-- Badge 3 -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 bg-white dark:bg-slate-800 p-4 rounded-xl w-32 border border-primary/10">
+<div class="size-14 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<p class="text-[11px] font-bold text-center leading-tight">7-Day Eco Hero</p>
+</div>
+</div>
+</div>
+<!-- Leaderboard Tabs -->
+<div class="px-4">
+<div class="flex bg-slate-200/50 dark:bg-slate-800 p-1 rounded-lg">
+<button class="flex-1 py-2 text-sm font-bold bg-white dark:bg-slate-700 rounded-md shadow-sm">Global</button>
+<button class="flex-1 py-2 text-sm font-bold text-slate-500 dark:text-slate-400">Friends</button>
+<button class="flex-1 py-2 text-sm font-bold text-slate-500 dark:text-slate-400">Local</button>
+</div>
+</div>
+<!-- Rankings List -->
+<div class="flex flex-col gap-1 p-4 mb-20">
+<!-- Rank 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/40 p-3 rounded-xl border-2 border-yellow-400/30">
+<div class="font-bold text-yellow-500 text-lg w-6">1</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border-2 border-yellow-400" data-alt="Avatar of first place recycler, female" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlYZ6iA8OXYHgJeJKMyPc04DZRNSKihmfyIEFT28JKE5DLcmzZR_cmfVi4ixy0ltTiHkou2Cc0_Mek9d973vWOHRCfqsrGn_XNz6L5NgLO7GqYcwQHdGGu7WJzZYgQFM2egu8r6nOABi_gCbm3PDQUWC9QIVCaRA2Ec7QOCwLUd6Y9eNlP3WPdpr6D7L5Qd4e3fkqKrWdQDtemfe2bLWKQL7JakrfXHknzI-cLybxcUOyU33e6mV51soDNu3irMy9dDKBxEU-bvw");'></div>
+<div class="flex flex-col flex-1">
+<p class="font-bold text-sm">Sarah Miller</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Master Recycler</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary text-sm">4,820</p>
+<p class="text-[10px] text-slate-400 uppercase">Points</p>
+</div>
+</div>
+<!-- Rank 2 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/40 p-3 rounded-xl">
+<div class="font-bold text-slate-400 text-lg w-6">2</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border border-slate-200 dark:border-slate-700" data-alt="Avatar of second place recycler, male" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCk1HBYAG5vnydC9EBOm-37pkC8pnxqWOFOXKl-5bLJMCbcXXMP_gcngaa8KaIGJby2Xp1Ah_HBH8R41YXqq3gG6UAaOymsnscZvQaImru11NwEXS-3IRp5coJOJXeNCahjW45511iS9nVtCDP68vzIhwnbG6KUDzh41CT1sUaRccLdwR0Wb7qtDv1psrG8XFMwo8BC-NDCBAtp93dZlWegB07u9XK-E9GKVZBivdVX0MNS2tZbzPZ4DTQIQHeFk89NE0VQD1XTuQ");'></div>
+<div class="flex flex-col flex-1">
+<p class="font-bold text-sm">Marcus Chen</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Eco Warrior</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary text-sm">4,510</p>
+<p class="text-[10px] text-slate-400 uppercase">Points</p>
+</div>
+</div>
+<!-- Rank 3 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/40 p-3 rounded-xl">
+<div class="font-bold text-orange-600/70 text-lg w-6">3</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border border-slate-200 dark:border-slate-700" data-alt="Avatar of third place recycler, female" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGsvfWzS08XmRnM1z93aw705st9IF3TM7g6KrEEY6H0w4BCsItqo-5A400JBxxpBnspB6Qs8enSmKMEkN7RCJHjDGGood5o8B9pjnyQLQAQ-_3Jg49K9ptEUlZvqhL_EvLYi3t7WMBxB4055TF3JSICk8TRMQUyT5jqeUASg5p9bF0aYswnc6i4zDVEPhHG3XUIacwmaeHS_vvWv4xtRwf9Kq617e5k3J-fzW_hr7nGDlFLkxu66cVYFSOIu7Vl-KrtXWJgnQNAQ");'></div>
+<div class="flex flex-col flex-1">
+<p class="font-bold text-sm">Elena Rodriguez</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Green Guardian</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary text-sm">4,290</p>
+<p class="text-[10px] text-slate-400 uppercase">Points</p>
+</div>
+</div>
+<!-- More ranks... -->
+<div class="flex justify-center py-2">
+<div class="w-1 h-1 rounded-full bg-slate-300 mx-1"></div>
+<div class="w-1 h-1 rounded-full bg-slate-300 mx-1"></div>
+<div class="w-1 h-1 rounded-full bg-slate-300 mx-1"></div>
+</div>
+<!-- User's Floating Rank -->
+<div class="flex items-center gap-4 bg-primary text-white p-4 rounded-2xl shadow-xl shadow-primary/30 mt-2 ring-4 ring-white dark:ring-slate-900 ring-offset-0">
+<div class="font-bold text-lg w-6">12</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 ring-2 ring-white/30" data-alt="User profile thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIMT2WJgiI0YNwoYhzU1VJACEhC74H27I7rbrGH6-z4Ze_g0b6wqGyKthDxLPfLDjer6__3vuLeiE3S_c73AbW7P03xxdXtKTEdKOPwKYgRXBT3s_lhB3QWNJIRE1yj0zqNgo1825vwwMyiEOeUZ6XfX3E6_-4fnWVUZ4pT_Wue1IO_Okf8SVW2hN0_COI2G7ZZy0V41xwjSFoE7S2TbuTMrsytZm_t2X9gbOJ6HtkdZ8XskoUKCPwjQwrrzwNEjRGHQhaPtik4Q");'></div>
+<div class="flex flex-col flex-1">
+<p class="font-bold text-sm">You (Alex)</p>
+<p class="text-xs text-white/80">Recycling Novice</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-sm">2,450</p>
+<p class="text-[10px] text-white/70 uppercase">Points</p>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto flex gap-2 border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md px-4 pb-6 pt-3 z-50">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">center_focus_strong</span>
+<p class="text-[10px] font-medium leading-normal tracking-tight">Track</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">history</span>
+<p class="text-[10px] font-medium leading-normal tracking-tight">History</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">emoji_events</span>
+<p class="text-[10px] font-bold leading-normal tracking-tight">Ranks</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal tracking-tight">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

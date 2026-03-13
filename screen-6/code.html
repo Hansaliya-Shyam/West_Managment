@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#4caeaa",
+                "background-light": "#f6f7f7",
+                "background-dark": "#151d1d",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-2 rounded-lg">
+<span class="material-icons text-white">recycling</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Eco<span class="text-primary">Track</span></span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium text-primary border-b-2 border-primary pb-1" href="#">Dashboard</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Map View</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-icons">notifications</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center overflow-hidden">
+<img alt="Profile" data-alt="User profile avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgtfv5zsgdTR8aZpSwtBv6p5gOl43wVVmyagVc4KB8rmyCQAfxb7dAiEXNyq4Px6EsltXUuwL-EBidQi7QGVgGlGqLcRB8wpl6BE_ZlRF3VYNgdUsK1IHkyuwsX-rVCQAH_cx6Tkc90q7RqjFoaUpkCj-gNlMjuu8r4baMj8YkL-VoxI7bQztyP5-I-oDOSpLjrXPKqlKynseB_v6tseWbrxyZuqzap9tI4j5tg795jSjr8peDhhoDfYXm7zWCSGxMd724h5Ha9g"/>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Header Section -->
+<header class="mb-8">
+<h1 class="text-3xl font-bold text-slate-900 dark:text-slate-100">Community Dashboard</h1>
+<p class="text-slate-500 dark:text-slate-400">Greenwood District AI-Waste Monitoring</p>
+</header>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-primary/5">
+<div class="flex items-center justify-between mb-4">
+<span class="material-icons text-primary bg-primary/10 p-2 rounded-lg">analytics</span>
+<span class="text-xs font-semibold text-primary px-2 py-1 bg-primary/10 rounded-full">+12%</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Recycling Rate</h3>
+<p class="text-2xl font-bold mt-1">68.4%</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-primary/5">
+<div class="flex items-center justify-between mb-4">
+<span class="material-icons text-primary bg-primary/10 p-2 rounded-lg">delete_sweep</span>
+<span class="text-xs font-semibold text-slate-400 px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">Target 2.4t</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Monthly Waste Reduced</h3>
+<p class="text-2xl font-bold mt-1">1.8 Tons</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-primary/5">
+<div class="flex items-center justify-between mb-4">
+<span class="material-icons text-primary bg-primary/10 p-2 rounded-lg">groups</span>
+<span class="text-xs font-semibold text-primary px-2 py-1 bg-primary/10 rounded-full">Active</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Households</h3>
+<p class="text-2xl font-bold mt-1">1,240</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-primary/5">
+<div class="flex items-center justify-between mb-4">
+<span class="material-icons text-primary bg-primary/10 p-2 rounded-lg">eco</span>
+<span class="text-xs font-semibold text-primary px-2 py-1 bg-primary/10 rounded-full">Top 5%</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Eco Score Rank</h3>
+<p class="text-2xl font-bold mt-1">Silver Tier</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Map and Collection -->
+<div class="lg:col-span-2 space-y-8">
+<!-- Heatmap Section -->
+<section class="bg-white dark:bg-slate-900 rounded-xl shadow-sm overflow-hidden border border-primary/5">
+<div class="p-6 border-b border-primary/5 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-bold">Waste Heatmap</h2>
+<p class="text-xs text-slate-500">Live recycling density in your area</p>
+</div>
+<div class="flex gap-2">
+<span class="flex items-center gap-1 text-xs text-slate-500">
+<span class="w-3 h-3 rounded-full bg-primary/20"></span> Low
+                            </span>
+<span class="flex items-center gap-1 text-xs text-slate-500">
+<span class="w-3 h-3 rounded-full bg-primary"></span> High
+                            </span>
+</div>
+</div>
+<div class="relative h-80 w-full bg-slate-200 dark:bg-slate-800">
+<img class="w-full h-full object-cover opacity-60 mix-blend-multiply dark:mix-blend-overlay" data-alt="Abstract aerial city map view heatmap overlay" data-location="Greenwood District" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArJ7Bslek37TpZrdv76umr5DLAOq67ysoLu5qS-M1P4LLCw0Qg8qzUDFYvWPOBIE52U2loMfWPaSUryCHv0PIG0sWj0qSsPdCg3KVybsyPJlktTILrYOufbk_9HopuiOWbMxZLRo-aCvGQ03FCyyQDy5_tye1bis7o3SQS__w3qNgeueEA7ags-7nlOcoOa19tgbrcGmQ4HqI-5y6GvM0ehBTW9xH0NSVV6dW9ah5_veTuEdxMzBodcUKJEWOT6K1wR9-tT2U3SA"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-32 h-32 bg-primary/30 rounded-full blur-3xl"></div>
+<div class="w-48 h-48 bg-primary/20 rounded-full blur-2xl ml-20"></div>
+</div>
+<!-- UI Overlays for Map -->
+<div class="absolute bottom-4 right-4 flex flex-col gap-2">
+<button class="bg-white dark:bg-slate-800 p-2 rounded-lg shadow-lg border border-primary/10">
+<span class="material-icons text-primary">my_location</span>
+</button>
+<button class="bg-white dark:bg-slate-800 p-2 rounded-lg shadow-lg border border-primary/10">
+<span class="material-icons text-primary">add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Nearby Recycling Locations -->
+<section class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-primary/5 p-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<h2 class="text-lg font-bold">Recycling Hubs</h2>
+<div class="flex gap-2 overflow-x-auto pb-2 sm:pb-0">
+<button class="px-3 py-1.5 rounded-full bg-primary text-white text-xs font-medium whitespace-nowrap">All</button>
+<button class="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20 whitespace-nowrap">Plastic</button>
+<button class="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20 whitespace-nowrap">E-Waste</button>
+<button class="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20 whitespace-nowrap">Glass</button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 rounded-xl border border-primary/10 hover:border-primary/40 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 p-3 rounded-lg text-primary">
+<span class="material-icons">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-800 dark:text-slate-100">Greenwood Central Hub</h4>
+<p class="text-xs text-slate-500">0.8 miles away • Open until 8:00 PM</p>
+<div class="flex gap-2 mt-1">
+<span class="text-[10px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Glass</span>
+<span class="text-[10px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Paper</span>
+</div>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all">Schedule Pickup</button>
+</div>
+<div class="flex items-center justify-between p-4 rounded-xl border border-primary/10 hover:border-primary/40 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 p-3 rounded-lg text-primary">
+<span class="material-icons">devices</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-800 dark:text-slate-100">TechRecycle E-Waste</h4>
+<p class="text-xs text-slate-500">1.4 miles away • Appointment only</p>
+<div class="flex gap-2 mt-1">
+<span class="text-[10px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Batteries</span>
+<span class="text-[10px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Electronics</span>
+</div>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all">Schedule Pickup</button>
+</div>
+<div class="flex items-center justify-between p-4 rounded-xl border border-primary/10 hover:border-primary/40 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 p-3 rounded-lg text-primary">
+<span class="material-icons">restore_from_trash</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-800 dark:text-slate-100">River Road Composting</h4>
+<p class="text-xs text-slate-500">2.1 miles away • 24/7 Drop-off</p>
+<div class="flex gap-2 mt-1">
+<span class="text-[10px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Organic</span>
+<span class="text-[10px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Garden</span>
+</div>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all">Schedule Pickup</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Schedule and Tips -->
+<div class="space-y-8">
+<!-- Collection Schedule -->
+<section class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-primary/5 p-6">
+<h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-icons text-primary">event</span>
+                        Waste Schedule
+                    </h2>
+<div class="space-y-4">
+<div class="p-4 bg-primary/5 border-l-4 border-primary rounded-r-xl">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-bold text-primary uppercase">Tomorrow</p>
+<h4 class="font-bold">General Waste</h4>
+<p class="text-xs text-slate-500">Pickup starts at 7:30 AM</p>
+</div>
+<span class="material-icons text-primary/40">delete</span>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-l-4 border-slate-300 dark:border-slate-700 rounded-r-xl opacity-80">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase">Friday, Oct 25</p>
+<h4 class="font-bold">Mixed Recycling</h4>
+<p class="text-xs text-slate-500">Pickup starts at 6:00 AM</p>
+</div>
+<span class="material-icons text-slate-400">autorenew</span>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-l-4 border-slate-300 dark:border-slate-700 rounded-r-xl opacity-80">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase">Monday, Oct 28</p>
+<h4 class="font-bold">Hazardous Waste</h4>
+<p class="text-xs text-slate-500">Special curbside event</p>
+</div>
+<span class="material-icons text-slate-400">warning_amber</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-3 border border-dashed border-primary/40 text-primary font-medium rounded-xl hover:bg-primary/5 transition-colors">
+                        Add to Calendar
+                    </button>
+</section>
+<!-- Recycling Stats Breakdown -->
+<section class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-primary/5 p-6">
+<h2 class="text-lg font-bold mb-4">Material Breakdown</h2>
+<div class="space-y-5">
+<div>
+<div class="flex justify-between text-xs mb-1">
+<span class="text-slate-500">Plastic</span>
+<span class="font-bold">45%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[45%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-1">
+<span class="text-slate-500">Paper &amp; Cardboard</span>
+<span class="font-bold">30%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[30%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-1">
+<span class="text-slate-500">Glass</span>
+<span class="font-bold">15%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[15%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-1">
+<span class="text-slate-500">Metals</span>
+<span class="font-bold">10%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[10%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Impact -->
+<div class="bg-primary p-6 rounded-xl text-white relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-bold mb-2">Community Impact</h3>
+<p class="text-sm opacity-90 mb-4">You've helped save 14 trees this month through community recycling efforts!</p>
+<a class="text-xs font-bold uppercase underline tracking-wider" href="#">See leaderboard</a>
+</div>
+<span class="material-icons absolute -bottom-4 -right-4 text-white/20 text-8xl">park</span>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-12 py-8 border-t border-primary/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 text-sm">
+<p>© 2024 EcoTrack AI Waste Systems. Greenwood Community Initiative.</p>
+</div>
+</footer>
+</body></html>

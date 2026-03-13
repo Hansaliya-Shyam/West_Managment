@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4caeaa",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#151d1d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between p-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">recycling</span>
+<h1 class="text-xl font-bold tracking-tight">EcoTrack</h1>
+</div>
+<button class="text-primary font-semibold text-sm hover:opacity-80 transition-opacity">Skip</button>
+</header>
+<main class="flex-1 flex flex-col">
+<div class="flex flex-1 overflow-x-auto snap-x snap-mandatory hide-scrollbar">
+<section class="flex-none w-full snap-center px-6 flex flex-col">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-primary/10 mb-8 shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Hand holding phone scanning a plastic bottle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCl4DqYDt1uP_vdUi7DXOOV36cO5F3ZyXpJ7HuQ8BiZv6UOAnf7ZmrircKpfAWTicPzqRWYZtSYlhxo1BktwT_a9JIP65r1LGKi1e8ssh775Z5ZNYixOd095y_dhJPJfRK7OGCXuSGA1WVIgbrNNbpYmiFkaaSzgxlBLTPaV9mRVzYZFxz4Sssc-LuIMOQkIBQ71VIHImt5u5tN2FV8dJ9DvbY66wd3ZLKh2Zyj3z_7GZiKTf6JLUniWsQekJfA7D0E-xbGPHZSyw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+<div class="space-y-3">
+<h2 class="text-2xl font-bold">Scan Waste</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            Use your camera to identify household waste instantly with our smart vision technology.
+                        </p>
+</div>
+</section>
+<section class="flex-none w-full snap-center px-6 flex flex-col">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-primary/10 mb-8 shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="AI interface detecting different types of waste materials" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD623NGLttymp1tWbFpheFR1qPoarr3L2CZg5-qc3dAQtsYVhjzrGEMA2wquAfEF-LkfA47X1v1VYMlGZSFXFmRtwyTTt_04dXb1sgiphXqtSsdm4N4MXxcLra8P2oF-ZMZmOJWid-jHItkDsjKXw_lK0ZzIe9kIA6w3HqjI-D0tegn3FiLN89gHpI6AnDqI3-9ecxsIkhT-wAA6Fu1Ehh9M7MhnW03RHXR2wEtRVGlfFSBOOsc8g42kiaBX1fmRLiAvYp9zhuBBw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+<div class="space-y-3">
+<h2 class="text-2xl font-bold">AI Classification</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            Our advanced AI detects waste type instantly, from compostable to hazardous materials.
+                        </p>
+</div>
+</section>
+<section class="flex-none w-full snap-center px-6 flex flex-col">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-primary/10 mb-8 shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Organized recycling bins with clear graphic icons" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGQ3YyaKdq4qhDqRfKNVt7YtUnqxj_LRpjyOcNG_FTFfMHa5B5TZ_ykJ-YG4zMK6goRfjGk_KUOlL2g0MzrFjY0TiOF38yNcdMvEfYZn8wXVwISB4KrUszaWJOn1MITDV3uCxpa5ddaP8FcwIsaL5o2Ts2hXB-Qqu0dB1ZK0pS1owXQkb33lLpxHajU2wsF4MXPUZ3h6PckIUB1rDv6RG5Cq61zfjk1tyoiESCLnu3i7GvUWc-M4ARdgUe6qYHZxF7KhAWxez2qQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+<div class="space-y-3">
+<h2 class="text-2xl font-bold">Recycling Guide</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            Get step-by-step recycling instructions tailored to your specific local waste regulations.
+                        </p>
+</div>
+</section>
+</div>
+<div class="px-6 py-6 flex flex-col gap-6">
+<div class="flex justify-center gap-2">
+<div class="h-1.5 w-8 rounded-full bg-primary"></div>
+<div class="h-1.5 w-2 rounded-full bg-primary/30"></div>
+<div class="h-1.5 w-2 rounded-full bg-primary/30"></div>
+</div>
+<div class="p-5 rounded-xl border border-primary/20 bg-primary/5 dark:bg-primary/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex gap-4">
+<div class="bg-primary/20 p-2 rounded-lg h-fit">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div class="flex flex-col">
+<p class="font-bold text-sm">Enable Location</p>
+<p class="text-xs text-slate-600 dark:text-slate-400">Find nearby recycling centers and local rules.</p>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-slate-900 px-4 py-2 rounded-lg text-sm font-semibold transition-colors w-full sm:w-auto">
+                        Allow Access
+                    </button>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 bg-primary hover:bg-primary/90 text-slate-900 h-14 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+                        Get Started
+                    </button>
+</div>
+</div>
+</main>
+<footer class="h-8"></footer>
+</div>
+</body></html>
